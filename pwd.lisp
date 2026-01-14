@@ -29,7 +29,6 @@
 
  (:name "Gavin D. Howard"
   :site "https://gavinhoward.com/"
-  :blog "https://gavinhoward.com/"
   :feed "https://gavinhoward.com/index.xml"
   :about "https://gavinhoward.com/about/"
   :hnuid "gavinhoward"
