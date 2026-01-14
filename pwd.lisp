@@ -66,6 +66,12 @@
   :hnuid "xnacly"
   :bio "Writes about compilers and hardware.  Contributes to open source software.")
 
+ (:name "Mike Cardwell"
+  :site "https://www.grepular.com/"
+  :feed "https://www.grepular.com/rss"
+  :hnuid "mike-cardwell"
+  :bio "Writes about tech, privacy, security and programming.")
+ 
  (:name "Nicolas Chagnet"
   :site "https://nchagnet.pages.dev/"
   :feed "https://nchagnet.pages.dev/rss.xml"
