@@ -74,6 +74,13 @@
   :hnuid "zahlman"
   :bio "Tools developer and Python educator.")
 
+ (:name "Kyle Ross"
+  :site "https://ktross.com/"
+  :feed "https://ktross.com/rss.xml"
+  :about "https://ktross.com/"
+  :hnuid "ktross"
+  :bio "Software Engineer. Interested in DevOps, DevEx, and a variety of programming languages.")
+
  (:name "Matteo"
   :site "https://xnacly.me/"
   :blog "https://xnacly.me/posts/"
