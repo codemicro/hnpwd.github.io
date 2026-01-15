@@ -18,6 +18,13 @@
          (string= (getf item :site) "")))
    (read-list "pwd.lisp")))
 
+(defun err (message &rest args)
+  "Print an error message and exit."
+  (format *error-output* "ERROR: ")
+  (apply #'format *error-output* message args)
+  (terpri *error-output*)
+  (uiop:quit 1))
+
 (defun validate-name-order (items)
   "Check that entries are arranged in the order of names."
   (let ((prev-name)
@@ -25,7 +32,7 @@
     (dolist (item items)
       (setf curr-name (getf item :name))
       (when (and prev-name (string< curr-name prev-name))
-        (error "~a - Not in alphabetical order" curr-name))
+        (err "~a: Not in alphabetical order" curr-name))
       (setf prev-name curr-name))))
 
 (defun validate-bio-length (items)
@@ -34,8 +41,8 @@
     (let ((bio (getf item :bio))
           (max-len 80))
       (when (and bio (> (length bio) max-len))
-        (error "~a - Bio of length ~a exceeds ~a characters"
-               (getf item :name) (length bio) max-len)))))
+        (err "~a: Bio of length ~a exceeds ~a characters"
+             (getf item :name) (length bio) max-len)))))
 
 (defun weekday-name (weekday-index)
   "Given an index, return the corresponding day of week."
